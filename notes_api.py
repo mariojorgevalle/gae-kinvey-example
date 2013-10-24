@@ -37,7 +37,7 @@ class NotesHandler(webapp2.RequestHandler):
 
     elif request["method"] == "DELETE":
       #Delete document
-      doc_index = search.Index(namespace="kinvey", name="person")
+      doc_index = search.Index(namespace="kinvey", name="notes")
       #Use entity id to delete document
       doc_index.delete([request["entityId"]])
 
